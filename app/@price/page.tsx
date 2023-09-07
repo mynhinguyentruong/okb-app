@@ -8,7 +8,6 @@ import { getUSDCETHPrice } from "@/utils/get_usdc_eth_price"
 
 export default async function Page() {
 
-  // const provider = new ethers.providers.AlchemyProvider("mainnet", 'api-key')
   const value = await getUSDCETHPrice()
   
   return (
@@ -18,7 +17,7 @@ export default async function Page() {
         </CardHeader>
 
         <CardContent>
-          <p>${JSON.stringify(value)}</p>
+          <p>{JSON.stringify(value)}</p>
         </CardContent>
       </Card>
   )
