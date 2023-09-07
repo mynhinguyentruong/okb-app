@@ -13,11 +13,11 @@ export default async function Page() {
   return (
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>Current USDC/ETH Price</CardTitle>
+          <CardTitle>Current ETH/USD Price</CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p>{JSON.stringify(value)}</p>
+          <p>${JSON.stringify(value)}</p>
         </CardContent>
       </Card>
   )

@@ -21,4 +21,4 @@ export default function Page() {
   )
  }
 
- export const revalidate = 1 // Refresh every second 
+ export const revalidate = 0 // Refresh every second 
