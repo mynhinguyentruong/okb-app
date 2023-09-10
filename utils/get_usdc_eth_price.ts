@@ -2,7 +2,7 @@ import { ethers } from "ethers"
 import { aggregatorV3InterfaceABI } from "@/utils/abi"
 import { uniswapV3PoolABI } from "@/utils/uniswapv3pool_abi"
 
-export async function getUSDCETHPrice(): Promise<number> {
+export async function getUSDCETHPrice(input: number): Promise<number> {
     const provider = new ethers.AlchemyProvider("mainnet",process.env.ALCHEMY_KEY as string) 
     
     // const addr = '0x986b5E1e1755e3C2440e960477f25201B0a8bbD4';
@@ -14,7 +14,7 @@ export async function getUSDCETHPrice(): Promise<number> {
 
     let decimals = await priceFeed.decimals();
 
-    return (Number(roundData.answer.toString()) / Math.pow(10, Number(decimals)));
+    return (Number(roundData.answer.toString()) / Math.pow(10, Number(decimals))*input);
 }
 
 export async function getPriceFromSQRTPriceX96(): Promise<number> {

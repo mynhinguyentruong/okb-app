@@ -4,11 +4,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { getUSDCETHPrice } from "@/utils/get_usdc_eth_price" 
+import CardPrice from "@/components/ui/card-price"
+import { Input } from "@/components/ui/input"
+
+import { getPriceFromSQRTPriceX96, getUSDCETHPrice } from "@/utils/get_usdc_eth_price" 
 
 export default async function Page() {
 
-  const value = await getUSDCETHPrice()
+  const value = await getUSDCETHPrice(2)
+
+  const value_1 = await getPriceFromSQRTPriceX96()
+  // await getPrice()
   
   return (
       <Card className="w-[350px]">
@@ -16,9 +22,7 @@ export default async function Page() {
           <CardTitle>Current ETH/USD Price</CardTitle>
         </CardHeader>
 
-        <CardContent>
-          <p>${JSON.stringify(value)}</p>
-        </CardContent>
+        <CardPrice />
       </Card>
   )
  }
