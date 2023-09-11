@@ -4,11 +4,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { getUSDCETHPrice } from "@/utils/get_usdc_eth_price" 
+import { getPriceFromSQRTPriceX96, getUSDCETHPrice } from "@/utils/get_usdc_eth_price" 
 
 export default async function Page() {
 
   const value = await getUSDCETHPrice()
+  const value_0 = await getPriceFromSQRTPriceX96()
   
   return (
       <Card className="w-[350px]">
@@ -17,7 +18,8 @@ export default async function Page() {
         </CardHeader>
 
         <CardContent>
-          <p>${JSON.stringify(value)}</p>
+          <p>On Chainlink: ${JSON.stringify(value)}</p>
+          <p>On Uniswap: ${JSON.stringify(value_0)}</p>
         </CardContent>
       </Card>
   )
