@@ -6,9 +6,10 @@ import {
 } from "@/components/ui/card"
 import { getPriceFromSQRTPriceX96, getUSDCETHPrice } from "@/utils/get_usdc_eth_price" 
 
+
 export default async function Page() {
 
-  const value = await getUSDCETHPrice()
+  const value = await getUSDCETHPrice(1)
   const value_0 = await getPriceFromSQRTPriceX96()
   
   return (

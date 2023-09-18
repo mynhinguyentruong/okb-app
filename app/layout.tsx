@@ -12,9 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   price,
   datetime,
+  children
 }: {
   price: React.ReactNode,
   datetime: React.ReactNode,
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -22,6 +24,7 @@ export default function RootLayout({
       <main className="flex m-3 space-x-3">
         {datetime}
         {price}
+        {children}
       </main>
       </body>
     </html>
