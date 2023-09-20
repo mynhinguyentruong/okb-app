@@ -8,6 +8,8 @@ import placeholder from "@/public/placeholder.jpg"
 
 import Link from "next/link"
 import { HeroComponent } from "@/components/hero-component";
+import Footer from "@/components/ui/footer";
+import TestimonialBrands from "@/components/ui/testimonial-brands";
 
 export default function Page() {
   return (
@@ -21,7 +23,7 @@ export default function Page() {
         </div>
       </div>
     </header>
-    <div className="flex-1 h-80">
+    <div className="flex-1 h-90">
     <section className="w-full  py-12 md:py-24 lg:py-32 xl:py-48 ">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 items-center">
@@ -34,20 +36,20 @@ export default function Page() {
                 Join us and take control of your inbox. Fast, secure, and designed for modern life.
               </p>
             </div>
-            <div className="w-full max-w-sm space-y-2 mx-auto">
-              <form className="flex space-x-2">
-                <Input
-                  className="max-w-lg flex-1 bg-gray-800 text-white border-gray-900"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-                <Button className="bg-white text-black" type="submit">
-                  Join Now
+            <div className="w-full max-w-sm py-6 space-y-2 mx-auto space-x-2">
+                <Button variant="outline" type="submit">
+                 Book a demo 
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-2 h-4 w-4">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+</svg>
+
                 </Button>
-              </form>
-              <p className="text-xs text-zinc-200 dark:text-zinc-100">
-                Get ready to redefine your email experience.
-                <Link className="underline underline-offset-2 text-white" href="/terms">
+                <Button  type="submit">
+                  Tour our products
+                </Button>
+              <p className="text-xs text-zinc-500 dark:text-zinc-500 ">
+                Get ready to redefine your software product.
+                <Link className="underline underline-offset-2 text-zinc-600 px-1" href="/terms">
                   Terms & Conditions
                 </Link>
               </p>
@@ -58,6 +60,7 @@ export default function Page() {
     </section>
 
     </div>
+    <TestimonialBrands />
     <div className="flex-1 min-h-80">
       <Image
       src={placeholder}
@@ -72,17 +75,7 @@ export default function Page() {
     <div className="flex-1 min-h-screen ">
       <HeroComponent />
     </div>
-    <footer className="flex items-center justify-between px-6 py-4 border-t border-zinc-200 dark:border-zinc-800">
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">© 2023 Acme Inc.</p>
-        <nav className="flex items-center space-x-4">
-          <Link className="text-sm text-zinc-500 dark:text-zinc-400" href="/terms">
-            Terms
-          </Link>
-          <Link className="text-sm text-zinc-500 dark:text-zinc-400" href="/privacy">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
+    <Footer /> 
     </div>
     </div>
   )
