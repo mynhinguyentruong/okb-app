@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <main className="flex m-3 space-x-3">
+      <main className="flex flex-col ">
         {datetime}
         {price}
         {children}
