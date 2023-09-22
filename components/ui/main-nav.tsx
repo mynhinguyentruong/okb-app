@@ -17,6 +17,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import Logo from "./logo"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -26,33 +27,21 @@ const components: { title: string; href: string; description: string }[] = [
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Blockchain Solution",
+    title: "Minimum Viable Product (MVP)",
     href: "/docs/primitives/hover-card",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "[Service ...]",
+    title: "Mobile App Development",
     href: "/docs/primitives/progress",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
   {
-    title: "[Service ...]",
+    title: "Web App Development",
     href: "/docs/primitives/scroll-area",
     description: "Visually or semantically separates content.",
-  },
-  {
-    title: "[Service...]",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Service...",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
 ]
 
@@ -62,8 +51,8 @@ export default function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">
+      <Logo />
+        <span className="sr-only hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
@@ -79,24 +68,24 @@ export default function MainNav() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href={siteConfig.url}
                   >
-                    <Icons.logo className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <Logo />
+                    <div className="sr-only mb-2 mt-4 text-lg font-medium">
                      {siteConfig.name} 
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    {/* <p className="text-sm leading-tight text-muted-foreground">
                     {siteConfig.description}
-                    </p>
+                    </p> */}
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="[Something]">
-              ...
+              <ListItem href="/docs" title="/01. Discover">
+              We work closely with our clients to understand their needs and goals.
               </ListItem>
-              <ListItem href="/docs/installation" title="[Something]">
-              ...
+              <ListItem href="/docs/installation" title="/02. Build">
+              Based off of the discovery phase, we develop a comprehensive roadmap for each product and start working towards delivery.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="[Something]">
-              ...
+              <ListItem href="/docs/primitives/typography" title="/03. Deliver">
+              We ensure that product is fully functional at launch
               </ListItem>
             </ul>
           </NavigationMenuContent>

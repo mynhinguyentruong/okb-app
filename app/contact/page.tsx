@@ -32,11 +32,11 @@ export default function Page() {
     </svg>
   </div>
 
-  <div>
+  <div className="relative lg:ml-36">
       <h1>
         <span className="block font-display text-base font-semibold text-neutral-950">Contact us</span>
         <span className="sr-only"> - </span>
-        <span className="mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">Let’s work together</span>
+        <span className="mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">Let&apos;s work together</span>
 
       </h1>
       <div className="mt-6 max-w-3xl text-xl text-neutral-600"><p>We can’t wait to hear from you.</p></div>
@@ -49,8 +49,8 @@ export default function Page() {
 
   </div>
 
-        <div className="grid w-full grid-cols-1 items-center gap-x-8 gap-y-16  py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-        <div>
+        <div className="grid mx-auto w-full grid-cols-1 items-center gap-x-8 gap-y-16  py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <div className="relative">
         <span className="block font-display text-base font-semibold text-neutral-950">Our offices</span>
           <p className="mt-4 text-gray-500">
             Prefer doing things in person? We don’t but we have to list our addresses here for legal reasons.
@@ -79,7 +79,7 @@ export default function Page() {
           </dl>
         </div>
         </div>
-        <div className="flex flex-col h-full px-3">
+        <div className="relative flex flex-col h-full px-3">
         <span className="block font-display text-base font-semibold text-neutral-950">Work inquiries</span>
           <form className="mt-4 border border-gray-200 rounded-lg">
             <label
@@ -167,24 +167,9 @@ export default function Page() {
             Message
             </span>
             </label>
-            <div className="grid grid-cols-1">
-            <p className="block w-full">Hello</p>
-            <div className="flex items-center">
-    <input id="link-radio" type="radio" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label htmlFor="link-radio" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Radio button with a <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">link inside</a>.</label>
-</div>
-            <div className="flex items-center">
-    <input id="link-radio" type="radio" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label htmlFor="link-radio" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Radio button with a <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">link inside</a>.</label>
-</div>
-            <div className="flex items-center">
-    <input id="link-radio" type="radio" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label htmlFor="link-radio" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Radio button with a <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">link inside</a>.</label>
-</div>
-</div>
     </form>
             <Button type="button" className="mt-6 max-w-sm">
-            Let's work together
+            Let&apos;s work together
             </Button>
 
         </div>
