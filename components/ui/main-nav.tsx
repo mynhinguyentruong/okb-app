@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -59,7 +58,6 @@ const components: { title: string; href: string; description: string }[] = [
 
 
 export default function MainNav() {
-  const pathname = usePathname()
 
   return (
     <div className="mr-4 hidden md:flex">
@@ -79,27 +77,26 @@ export default function MainNav() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href={siteConfig.url}
                   >
                     <Icons.logo className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                     {siteConfig.name} 
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                    {siteConfig.description}
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="/docs" title="[Something]">
+              ...
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem href="/docs/installation" title="[Something]">
+              ...
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/docs/primitives/typography" title="[Something]">
+              ...
               </ListItem>
             </ul>
           </NavigationMenuContent>

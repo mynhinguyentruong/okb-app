@@ -1,8 +1,6 @@
 import  MainNav  from "@/components/ui/main-nav";
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import placeholder from "@/public/placeholder.jpg"
 
 
@@ -33,7 +31,7 @@ export default function Page() {
                 Build your MVP in 1 month.  
               </h1>
               <p className="max-w-[600px] text-zinc-600 md:text-xl dark:text-zinc-100 mx-auto">
-                Join us and take control of your inbox. Fast, secure, and designed for modern life.
+              Turn your idea into real product that user love.
               </p>
             </div>
             <div className="w-full max-w-sm py-6 space-y-2 mx-auto space-x-2">
@@ -60,7 +58,6 @@ export default function Page() {
     </section>
 
     </div>
-    <TestimonialBrands />
     <div className="flex-1 min-h-80">
       <Image
       src={placeholder}
