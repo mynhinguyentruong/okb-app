@@ -5,9 +5,10 @@ import Image from "next/image"
 import { useRef, useEffect } from "react";
 import { useAnimate, stagger, motion, useInView } from "framer-motion";
 
-const staggerMenuItems = stagger(0.2, { startDelay: 0.15 });
-function useMenuAnimation(isOpen: boolean) {
+
+export function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
+  const staggerMenuItems = stagger(0.2, { startDelay: 0.15 });
 
   useEffect(() => {
 
@@ -71,7 +72,7 @@ export default function OurValueComponent() {
 
                 </li>
                 <li className="text-base text-neutral-600 before:bg-neutral-950 after:bg-neutral-100">
-                  <div >
+                  <div style={{"opacity": 1, "transform": "none"}}>
                   <div className="pl-8 relative before:absolute after:absolute before:bg-neutral-950 after:bg-neutral-950/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px"><strong className="font-semibold text-neutral-950">Efficient.</strong> We pride ourselves on never missing a deadline.</div></div></li>
                   <li className="text-base text-neutral-600 before:bg-neutral-950 after:bg-neutral-100">
                     <div style={{"opacity": 1, "transform": "none"}}><div className="pl-8 relative before:absolute after:absolute before:bg-neutral-950 after:bg-neutral-950/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px"><strong className="font-semibold text-neutral-950">Adaptable.</strong> Every business has unique needs that demand adaptability.</div></div>

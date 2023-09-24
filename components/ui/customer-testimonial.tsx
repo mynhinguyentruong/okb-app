@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 export default function CustomerTestimonial() {
-    const ref = useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (

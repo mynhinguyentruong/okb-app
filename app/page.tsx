@@ -15,6 +15,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { motion } from "framer-motion";
 import OurValueComponent from "@/components/ui/test-component"
 import CustomerTestimonial from "@/components/ui/customer-testimonial"
+import HarnessTechnology from "@/components/ui/harness-technology"
 
 export default function Page() {
       const container = {
@@ -104,37 +105,9 @@ export default function Page() {
     </motion.ul>
     <TestimonialBrands />
 
-  <>
-      <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1,  transition: {ease: "easeIn",  delay: 0.5, }}}
-     className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-4">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <div className="max-w-2xl" style={{"opacity": 1, }}>
-              <h2>
-                <span className="sr-only"> - </span>
-                <span
-                className="block font-display tracking-tight [text-wrap:balance] text-4xl font-medium sm:text-5xl text-neutral-950">Harnessing technology for a brighter future</span>
+    <HarnessTechnology />
 
-              </h2>
-              <div className="mt-6 text-xl text-neutral-600">
-                <p>We believe technology is the answer to the world’s greatest challenges. We pair modern technologies with design thinking to turn user insights into production-ready apps.</p>
-
-            </div>
-          </div>
-
-        </div>
-        </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <div>
-             </div></div></div>
-
-   </motion.div>
-                    </>
-
-<CustomerTestimonial/>
+    <CustomerTestimonial/>
    {/* <div className="flex-1 min-h-80">
       <Image
       src={placeholder}
