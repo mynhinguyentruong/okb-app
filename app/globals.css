@@ -74,3 +74,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* h1 { */
+/*   animation: color-change 10s infinite; */
+/* } */
+/**/
+/* @keyframes color-change { */
+/*   0% { color: linear-gradient(to right, black, yellow); } */
+/*   50% { color:linear-gradient(to right, black, yellow); } */
+/*   100% { color:  linear-gradient(to right, black, yellow);  } */
+/* } */
