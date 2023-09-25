@@ -1,9 +1,10 @@
 "use client"
-// import Image from "next/image"
+import Image from "next/image"
 // import vercelSVG from "@/public/vercel.svg"
 
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import Logo from "@/public/vercel.svg"
 
 export default function TestimonialBrands() {
   const ref = useRef(null);
@@ -29,54 +30,32 @@ export default function TestimonialBrands() {
           <div>
             <ul role="list" className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
               <li ref={ref}>
-                <div style={{"opacity": 1, "transform": "none"}}>
-                  <img alt="Phobia" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.ada2d552.svg" style={{"color": "transparent"}}/>
-
-                  </div>
-
-              </li>
-              <li>
-                <div style={{"opacity": 1, "transform": "none"}}><img alt="Family Fund" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.5c8de99c.svg" style={{"color": "transparent"}}/>
-
+                <div >
+                  <Image alt="Family Fund" loading="lazy" width={184} height={36} src={Logo} />
                 </div>
-
               </li>
               <li>
-                <div style={{"opacity": 1, "transform": "none"}}><img alt="Unseal" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.f6ce2960.svg" style={{"color": "transparent"}}/>
-
+                <div >
+                  <Image alt="Family Fund" loading="lazy" width={184} height={36} src={Logo} />
                 </div>
-
               </li>
               <li>
-                <div style={{"opacity": 1, "transform": "none"}}><img alt="Mail Smirk" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.249606f6.svg" style={{"color": "transparent"}}/>
-
+                <div >
+                  <Image alt="Family Fund" loading="lazy" width={184} height={36} src={Logo} />
                 </div>
-
               </li>
               <li>
-                <div style={{"opacity": 1, "transform": "none"}}>
-                  <img alt="Home Work" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.da1195d8.svg" style={{"color": "transparent"}}/></div>
-
-              </li>
-              <li>
-                <div style={{"opacity": 1, "transform": "none"}}>
-                  <img alt="Green Life" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.1704e6d8.svg" style={{"color": "transparent"}}/></div>
-
-              </li>
-              <li>
-                <div style={{"opacity": 1, "transform": "none"}}>
-                  <img alt="Bright Path" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.456aa9d9.svg" style={{"color": "transparent"}}/>
-
+                <div >
+                  <Image alt="Family Fund" loading="lazy" width={184} height={36} src={Logo} />
                 </div>
-
-              </li>
-              <li >
-                <div style={{"opacity": 1, "transform": "none"}}>
-                <img alt="North Adventures" loading="lazy" width="184" height="36" decoding="async" data-nimg="1" src="/_next/static/media/logo-light.e19f9c9b.svg" style={{"color": "transparent"}}/>
-
-                </div>
-
               </li>
 
-            </ul></div></div></div></div>      )
+            </ul>
+
+            </div>
+
+            </div>
+            </div>
+            </div>      
+  )
 }
